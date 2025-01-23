@@ -1,0 +1,28 @@
+$breakpoints: (
+  "xs": 0,
+  "sm": 425px,
+  "md": 800px,
+  "lg": 1024px,
+  "xl": 1440px,
+);
+
+// For screens smaller than or equal to the specified breakpoint (default is "md")
+@mixin mobile($points: map-get($breakpoints, "md")) {
+  @media (max-width: $points) {
+    @content;
+  }
+}
+
+// For screens larger than or equal to the specified breakpoint (default is "md")
+@mixin desktop($points: map-get($breakpoints, "md")) {
+  @media (min-width: $points) {
+    @content;
+  }
+}
+
+// For screens between two breakpoints ("lg" and "xl" by default)
+@mixin screen-lg($min: map-get($breakpoints, "lg"), $max: map-get($breakpoints, "xl")) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

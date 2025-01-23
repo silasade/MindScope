@@ -1,0 +1,142 @@
+@import "./../../../../baseStyles/index";
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px 0px 60px;
+  height: 100px;
+  @include mobile {
+    padding: 20px;
+    transition: height 1s ease-in-out;
+    justify-content: normal;
+    gap: 32px;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: white;
+    height: 55px;
+  }
+  .logo {
+    h3 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #9747ff;
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+    @include mobile {
+      align-self: flex-start;
+    }
+  }
+  .linkWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    a::after {
+      position: absolute;
+      width: 00%;
+      height: 4px;
+      content: "";
+      background-color: #9747ff;
+      left: 0;
+      top: 22px;
+      transition: width 0.3s ease-in;
+    }
+    a:hover::after {
+      width: 100%;
+    }
+    a:hover {
+      color: #9747ff;
+    }
+    a.active{
+      color: #9747ff;
+
+    }
+    a {
+      transition: color 0.3s ease-in;
+      position: relative;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    @include mobile {
+      align-self: flex-start;
+      flex-direction: column;
+      width: 100%;
+      text-align: left;
+      //
+    }
+  }
+  .authCta {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    button {
+      border: 1px solid #9747ff;
+      height: 52px;
+      width: 150px;
+      @include mobile {
+        height: 40px;
+        width: 100%;
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  .menu {
+    cursor: pointer;
+    display: none;
+    height: 100px;
+    .bar::before {
+      position: absolute;
+      content: "";
+      background-color: black;
+      top: 8px;
+      width: 30px;
+      height: 4px;
+    }
+    .bar {
+      position: relative;
+      background-color: black;
+      width: 30px;
+      height: 4px;
+      transform-origin: center;
+    }
+    .bar.active {
+      visibility: hidden;
+    }
+    .bar::after,
+    .bar::before {
+      transition: transform 0.3s ease, visibility 0.3s ease, top 0.3s ease,
+        bottom 0.3s ease;
+    }
+    .bar.active::after {
+      visibility: visible;
+      bottom: 2px;
+
+      transform: rotate(45deg);
+    }
+    .bar.active::before {
+      visibility: visible;
+
+      top: -2px;
+      transform: rotate(-45deg);
+    }
+    .bar::after {
+      position: absolute;
+      content: "";
+      background-color: black;
+      bottom: 8px;
+      width: 30px;
+      height: 4px;
+    }
+    @include mobile {
+      display: flex;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+    }
+  }
+}
