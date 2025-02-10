@@ -1,0 +1,70 @@
+@import "@/baseStyles/index";
+.wrapper {
+  background-color: #333333;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  .titles{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    h2 {
+      font-size: 48px;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+    }
+    h5{
+      font-size: 18px;
+      font-weight: 500;
+      color: lighten($color: #9747ff, $amount: 10%);
+      text-align: center;
+    }
+  }
+ 
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 70%;
+
+    input {
+      height: 70px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    input::placeholder {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .errorInput{
+        border-color: red;
+    }
+    .errorMessage {
+      color: red;
+      text-align: left;
+      font-size: 14px;
+      align-self: flex-start;
+      font-weight: 400;
+    }
+    .btn {
+      background-color: #9747ff;
+      color: #ffff;
+      font-size: 16px;
+      font-weight: 400;
+      width: 40%;
+      height: 50px !important;
+
+      border: 0;
+      &:hover {
+        background-color: lighten($color: #9747ff, $amount: 10%);
+        color: #ffff;
+      }
+    }
+  }
+}

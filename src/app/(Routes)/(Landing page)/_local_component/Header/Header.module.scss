@@ -1,5 +1,8 @@
-@import "./../../../../baseStyles/index";
+@import "@/baseStyles/index";
 .wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,6 +18,7 @@
     overflow: hidden;
     background-color: white;
     height: 55px;
+    z-index: 100;
   }
   .logo {
     h3 {
@@ -49,9 +53,8 @@
     a:hover {
       color: #9747ff;
     }
-    a.active{
+    a.active {
       color: #9747ff;
-
     }
     a {
       transition: color 0.3s ease-in;
@@ -71,10 +74,21 @@
     display: flex;
     flex-direction: row;
     gap: 16px;
+    .logInBtn {
+      background-color: #9747ff;
+      color: #ffff;
+    }
+    .signUpBtn {
+      color: #9747ff;
+      background-color: #ffff;
+    }
     button {
+      border-radius: 8px;
       border: 1px solid #9747ff;
-      height: 52px;
+      height: 50px;
       width: 150px;
+      font-size: 16px;
+      font-weight: 500;
       @include mobile {
         height: 40px;
         width: 100%;

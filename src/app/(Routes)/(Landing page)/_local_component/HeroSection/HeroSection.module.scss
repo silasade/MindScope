@@ -1,0 +1,40 @@
+@import "@/baseStyles/index";
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  height: 500px;
+  padding: 0 60px 20px 60px;
+
+  .heroContent {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #10182f;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333333;
+    }
+    button{
+       align-self: flex-start;
+       background-color: #9747ff;
+       color: #ffff;
+       font-size: 16px;
+       font-weight: 400;
+       padding: 10px;
+       border-radius: 8px;
+    }
+  }
+  .consultant {
+    position: relative;
+    width: 350px;
+    height: 350px;
+  }
+}

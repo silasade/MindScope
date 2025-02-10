@@ -6,13 +6,14 @@ import { TimelineLite } from "gsap";
 import { useMediaQuery } from "react-responsive";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import attachCloudinaryPrefix from "@/app/Hooks/_Cloudinary";
+import Image from "next/image";
 function Header() {
   const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
   const pathName = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const linksRef = useRef<HTMLDivElement | null>(null);
-  const btnRef = useRef<HTMLDivElement | null>(null);
 
   const tl = useRef(new TimelineLite({ paused: true }));
   // Toggle the menu when clicking on the hamburger
@@ -44,8 +45,15 @@ function Header() {
 
   return (
     <div ref={wrapperRef} className={s.wrapper}>
-      <div className={s.logo}>
-        <h3>MindScope</h3>
+      <div className="relative w-[200px] h-[150px]">
+        <Image
+          src={attachCloudinaryPrefix(
+            "v1738942077/blueLogo-removebg-preview_jjfsoh.png"
+          )}
+          alt="blue logo"
+          fill
+          className="object-contain"
+        />
       </div>
       <div ref={linksRef} className={s.linkWrapper}>
         <Link className={clsx({ [s.active]: pathName === "/" })} href="/">
@@ -70,10 +78,10 @@ function Header() {
           Contact
         </Link>
       </div>
-      <div ref={btnRef} className={s.authCta}>
+      {/* <div ref={btnRef} className={s.authCta}>
         <button className={s.signUpBtn}>Sign up</button>
         <button className={s.logInBtn}>Log in</button>
-      </div>
+      </div> */}
       <div onClick={toggleMenu} className={s.menu}>
         <div className={clsx(s.bar, { [s.active]: menuOpen })}></div>
       </div>

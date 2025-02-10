@@ -1,0 +1,40 @@
+@import "@/baseStyles/index";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px 60px 20px 60px;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #10182f;
+    }
+    .icon{
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #10182f;
+
+    }
+  }
+
+  .main {
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}

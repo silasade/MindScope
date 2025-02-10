@@ -1,5 +1,7 @@
 @import "@/baseStyles/index";
 .wrapper {
   background-color: lighten(#33333333, 50%);
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }

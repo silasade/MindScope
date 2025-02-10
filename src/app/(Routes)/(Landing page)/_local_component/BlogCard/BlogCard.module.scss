@@ -1,0 +1,106 @@
+@import "@/baseStyles/index";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #333333;
+  border-radius: 16px;
+  height: fit-content;
+  .main {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .blogPicture {
+
+      width: 100%;
+      height: 300px;
+      img {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        object-fit: cover;
+      }
+    }
+    .about {
+      display: flex;
+      flex-direction: row;
+      gap: 48px;
+      align-items: center;
+      .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        .profilePic {
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+      .name,
+      .time {
+        font-size: 14px;
+        font-weight: 400;
+        color: lighten(#333333, 30%);
+      }
+      .time::before {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background-color: lighten(#333333, 30%);
+        position: absolute;
+        left: -32px;
+        top: 45%;
+      }
+      .time {
+        position: relative;
+      }
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #333333;
+    }
+    .description {
+      font-size: 16px;
+      font-weight: 500;
+      color: lighten(#333333, 30%);
+    }
+    .reactTion {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .react {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+      }
+      .link {
+        background-color: #9747ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        cursor: pointer;
+        .arrow{
+          transform-origin: center;
+          transition: all 0.5s ease-in;
+
+        }
+        &:hover{
+          .arrow{
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
