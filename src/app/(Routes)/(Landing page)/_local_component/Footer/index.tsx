@@ -32,14 +32,14 @@ function Footer() {
     <div className={s.wrapper}>
       <div className={s.main}>
         <div className={s.logo}>
-          <div className="relative w-[200px] h-[150px]">
+          <div className="relative w-full max-w-[200px] h-[150px]">
             <Image
               src={attachCloudinaryPrefix(
                 "v1738943198/greyLogo-removebg-preview_1_lskrjc.png"
               )}
               alt="blue logo"
               fill
-              className="object-cover"
+              // className="object-contain"
             />
           </div>
           <div className={`${s.social}`}>

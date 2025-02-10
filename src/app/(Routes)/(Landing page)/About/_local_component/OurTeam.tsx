@@ -54,13 +54,13 @@ function OurTeam() {
   return (
     <div
       ref={wrapper}
-      className="flex flex-col gap-10 items-center justify-center bg-[#333333] p-[30px] w-100"
+      className="flex flex-col gap-5 md:gap-10 items-center justify-center bg-[#333333] p-[30px] w-100"
     >
       <div className="flex flex-col w-[80]">
-        <h2 className="text-center font-[700] text-[36px] text-white">
+        <h2 className="text-center font-[700] text-[18px] md:text-[24px] lg:text-[36px] text-white">
           Our Team
         </h2>
-        <h3 className="text-center font-[500] text-[16px] text-white w-[24]">
+        <h3 className="text-center font-[500] text-[14px] md:text-[16px] text-white w-[24]">
           We are a team of passionate technologists, creatives and visionary
           leaders who believe technology can fuel the growth of the modern day
           information industry
@@ -86,8 +86,12 @@ function OurTeam() {
                 />
               </div>
               <div className="flex flex-col text-center gap-1 text-[#333333]">
-                <h3 className="text-[16px] font-[500]">{item.name}</h3>
-                <h4 className="text-[14px] font-[400]">{item.title}</h4>
+                <h3 className="text-[14px] md:text-[16px] font-[500]">
+                  {item.name}
+                </h3>
+                <h4 className="text-[12px] md:text-[14px] font-[400]">
+                  {item.title}
+                </h4>
                 <h5 className="italic">{item.contact}</h5>
               </div>
             </div>

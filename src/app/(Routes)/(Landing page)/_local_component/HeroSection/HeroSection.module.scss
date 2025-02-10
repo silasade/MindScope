@@ -6,35 +6,58 @@
   align-items: center;
   height: 500px;
   padding: 0 60px 20px 60px;
-
+  @include mobile {
+    flex-direction: column;
+    padding: 30px;
+    align-items: normal;
+  }
   .heroContent {
     flex: auto;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    @include mobile{
+      gap: 12px;
+      text-align: center;
+    }
     h1 {
       font-size: 36px;
       font-weight: 700;
       color: #10182f;
+      @include mobile{
+        font-size: 18px;
+      }
     }
     h3 {
       font-size: 18px;
       font-weight: 500;
       color: #333333;
+      @include mobile{
+        font-size: 15px;
+      }
     }
-    button{
-       align-self: flex-start;
-       background-color: #9747ff;
-       color: #ffff;
-       font-size: 16px;
-       font-weight: 400;
-       padding: 10px;
-       border-radius: 8px;
+    button {
+      align-self: flex-start;
+      background-color: #9747ff;
+      color: #ffff;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 10px;
+      border-radius: 8px;
+      @include mobile{
+        align-self: center;
+        height: 40px;
+        font-size: 14px;
+      }
     }
   }
   .consultant {
     position: relative;
     width: 350px;
     height: 350px;
+    @include mobile{
+      width: 100%;
+      height: auto;
+    }
   }
 }

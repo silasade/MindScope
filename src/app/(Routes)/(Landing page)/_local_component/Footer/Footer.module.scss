@@ -6,8 +6,9 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
-  @include mobile{
+  @include mobile {
     padding: 20px;
+    gap: 12px;
   }
   .main {
     display: flex;
@@ -17,27 +18,25 @@
     @include mobile {
       flex-direction: column-reverse;
       align-items: flex-start;
+      justify-content: unset;
+      gap: 6px;
+
     }
   }
   .logo {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    @include mobile{
+    @include mobile {
       gap: 4px;
-    }
-    h3 {
-      font-size: 48px;
-      font-weight: 700;
-      color: #ffff;
-      @include mobile {
-        font-size: 24px;
-      }
     }
     .social {
       display: flex;
       flex-direction: row;
       gap: 12px;
+      @include mobile {
+        gap: 8px;
+      }
     }
   }
   a::after {
@@ -69,6 +68,9 @@
     font-size: 16px;
     font-weight: 400;
     color: #ffff;
+    @include mobile {
+      font-size: 14px;
+    }
   }
   @include mobile {
     align-self: flex-start;
@@ -83,12 +85,18 @@
 
     gap: 26px;
     width: 450px;
-
+    @include mobile {
+      width: 100%;
+      gap: 13px;
+    }
     h2 {
       font-size: 24px;
       font-weight: 700;
       color: white;
       text-align: left;
+      @include mobile {
+        font-size: 18px;
+      }
     }
     .form {
       display: flex;
@@ -116,6 +124,9 @@
       input::placeholder {
         font-size: 14px;
         font-weight: 500;
+        @include mobile {
+          font-size: 12px;
+        }
       }
       .errorInput {
         border-color: red;

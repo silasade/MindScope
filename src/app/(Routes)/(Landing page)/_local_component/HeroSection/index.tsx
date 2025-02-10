@@ -23,7 +23,7 @@ function HeroSection() {
       </div>
       <div
         ref={imageOne}
-        className="relative w-[50%] h-[450px]"
+        className="relative w-[100%] h-[250px] md:w-[50%] h-[450px]"
       >
         <Image
           src={attachCloudinaryPrefix("v1738344541/heroImg_dveqvm.webp")}

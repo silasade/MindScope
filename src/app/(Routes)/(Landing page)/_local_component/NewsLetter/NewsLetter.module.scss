@@ -7,7 +7,20 @@
   justify-content: center;
   align-items: center;
   gap: 36px;
-  .titles{
+  padding: 30px;
+  @include screen-lg(1024px) {
+    min-height: 450px;
+  }
+
+  @include desktop {
+    @media (max-width: 1024px) {
+      min-height: auto;
+    }
+  }
+  @include mobile {
+    min-height: auto;
+  }
+  .titles {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -16,15 +29,24 @@
       font-weight: 700;
       color: white;
       text-align: center;
+      @include desktop {
+        font-size: 24px;
+      }
+      @include mobile {
+        font-size: 18px;
+      }
     }
-    h5{
+    h5 {
       font-size: 18px;
       font-weight: 500;
       color: lighten($color: #9747ff, $amount: 10%);
       text-align: center;
+      @include mobile {
+        font-size: 15px;
+      }
     }
   }
- 
+
   .form {
     display: flex;
     flex-direction: column;
@@ -32,18 +54,27 @@
     align-items: center;
     gap: 12px;
     width: 70%;
-
+    @include mobile {
+      width: 100%;
+    }
     input {
       height: 70px;
       font-size: 18px;
       font-weight: 500;
+      @include desktop {
+        height: 50px;
+      }
+      @include mobile {
+        height: 40px;
+        width: 100%;
+      }
     }
     input::placeholder {
       font-size: 18px;
       font-weight: 500;
     }
-    .errorInput{
-        border-color: red;
+    .errorInput {
+      border-color: red;
     }
     .errorMessage {
       color: red;
@@ -61,6 +92,11 @@
       height: 50px !important;
 
       border: 0;
+      @include mobile {
+        width: 35%;
+        height: 40px;
+        font-size: 14px;
+      }
       &:hover {
         background-color: lighten($color: #9747ff, $amount: 10%);
         color: #ffff;

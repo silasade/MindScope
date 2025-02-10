@@ -29,8 +29,8 @@ function ForgotPassword() {
   return (
     <div className="flex flex-col justify-center w-full gap-1 p-24 h-full">
       <div className="flex flex-col gap-2 text-center">
-        <h1 className="text-[36px] font-[700] text-[#10182f]">Forgot password</h1>
-        <h3 className="text-[18px] font-[500] text-[#10182f]">
+        <h1 className="text-[18px] md:text-[36px] font-[700] text-[#10182f]">Forgot password</h1>
+        <h3 className="text-[16px] md:text-[18px] font-[500] text-[#10182f]">
           Enter the email attached to your account
         </h3>
       </div>
@@ -54,7 +54,7 @@ function ForgotPassword() {
         <Button
           loading={isSubmitting}
           htmlType="submit"
-          className="w-full h-[40px] md:h-[50px] bg-[#10182f] border-0 text-white text-[16px] font-[500] hover:bg-[#10182f] focus:bg-[#10182f]"
+          className="w-full h-[40px] md:h-[50px] bg-[#10182f] border-0 text-white text-[14px] md:text-[16px] font-[500] hover:bg-[#10182f] focus:bg-[#10182f]"
         >
           Submit
         </Button>

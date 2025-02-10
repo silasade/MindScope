@@ -7,13 +7,12 @@ import { ArrowDown } from "@/app/(Routes)/_global_components/Icons/ArrowDown";
 function BlogCard() {
   return (
     <div className={s.wrapper}>
-      <div className={s.blogPicture}>
+      <div className={"relative w-100 h-64 rounded"}>
         <Image
           src={"/imgs/emptyImage.png"}
           alt="empty blog picture"
-          layout="responsive"
-          width={16} // Aspect ratio width
-          height={9}
+          fill
+          className="object-cover"
         />
       </div>
       <div className={s.main}>

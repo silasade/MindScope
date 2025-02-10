@@ -3,8 +3,11 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 20px 60px 20px 60px;
-
+  padding: 20px 60px 20px 60px; 
+  @include mobile{
+    gap: 12px;
+    padding: 30px;
+  }
   .title {
     display: flex;
     flex-direction: row;
@@ -14,6 +17,9 @@
       font-size: 36px;
       font-weight: 700;
       color: #10182f;
+      @include mobile{
+        font-size: 18px;
+      }
     }
     .icon{
       cursor: pointer;
@@ -24,7 +30,9 @@
       font-size: 18px;
       font-weight: 500;
       color: #10182f;
-
+      @include mobile{
+        font-size: 15px;
+      }
     }
   }
 

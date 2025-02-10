@@ -3,8 +3,11 @@ import attachCloudinaryPrefix from "@/app/Hooks/_Cloudinary";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import { useMediaQuery } from "react-responsive";
 function OurCommitment() {
   const content = useRef<HTMLDivElement | null>(null);
+  const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
+
   useEffect(() => {
     if (!content) return;
     gsap.fromTo(
@@ -16,7 +19,7 @@ function OurCommitment() {
         y: 0,
         scrollTrigger: {
           trigger: content.current,
-          start: "top 80%",
+          start: `top ${isMobile ? "30%" : "80%"}`,
           scrub: 0.5,
         },
       }
@@ -33,10 +36,10 @@ function OurCommitment() {
         />
       </div>
       <div ref={content} className="flex flex-col gap-[18px] w-[100%] md:w-[40%]">
-        <h2 className="text-[24px] font-[#10182f] font-[700]">
+        <h2 className="text-[18px] md:text-[24px] font-[#10182f] font-[700]">
           Our Commitment
         </h2>
-        <p className="text-[16px] font-[#10182f] font-[500]">
+        <p className="mdtext-[14px] text-[16px] font-[#10182f] font-[500]">
           At MindScope, we are dedicated to empowering communities and
           organizations with seamless digital solutions. Our mission is to
           enhance engagement, streamline operations, and foster meaningful

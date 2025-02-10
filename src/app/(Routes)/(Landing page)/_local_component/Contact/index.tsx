@@ -28,7 +28,7 @@ const contacts: ContactType[] = [
 ];
 function Contact() {
   return (
-    <div className="flex flex-col gap-8 items-center p-[30px] pt-30 pb-30">
+    <div className="flex flex-col gap-6 md:gap-8 items-center p-[30px] pt-30 pb-30">
       <h2 className="text-[18px] md:text-[36px] font-[700] text-center text-[#10182F] w-[75%]">
         We’re always available to answer your questions
       </h2>
@@ -42,10 +42,10 @@ function Contact() {
               <span className="bg-[#9747FF] rounded-[100%] p-6 w-fit h-fit">
                 {item.icons}
               </span>
-              <div className="flex flex-col gap-[6px] text-center text-white">
-                <h4 className="text-[18px]">{item.title}</h4>
-                <h5 className="text-[16px]">{item.subtitle}</h5>
-                <h6 className="text-[16px]">{item.address}</h6>
+              <div className="flex flex-col gap-[4px] md:gap-[6px] text-center text-white">
+                <h4 className="text-[16px] md:text-[18px]">{item.title}</h4>
+                <h5 className="text-[14px] md:text-[16px]">{item.subtitle}</h5>
+                <h6 className="text-[14px] md:text-[16px]">{item.address}</h6>
               </div>
             </div>
           );

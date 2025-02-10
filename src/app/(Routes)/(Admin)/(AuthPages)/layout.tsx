@@ -8,7 +8,7 @@ type layout = {
 function Authlayout({ children }: layout) {
   return (
     <div className="flex flex-row bg-[#9747ff] min-h-[100vh] w-full">
-      <div className="relative hidden md:inline w-2/5 h-[100] p-2">
+      <div className="relative hidden w-0 md:inline w-2/5 h-[100] p-2">
         <div className="relative w-[250px] h-[200px]">
           <Link href={"/"}>
             <Image
@@ -34,7 +34,7 @@ function Authlayout({ children }: layout) {
           </div>
         </div>
       </div>
-      <div className="w-100 md:w-3/5 h-[100] rounded-lg bg-[#ffffff]">
+      <div className="w-[100%] md:w-3/5 h-[100] rounded-lg bg-[#ffffff]">
         {children}
       </div>
     </div>

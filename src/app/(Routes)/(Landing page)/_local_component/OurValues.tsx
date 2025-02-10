@@ -28,8 +28,8 @@ const coreValues: cardType[] = [
 
 function OurValues() {
   return (
-    <div className="flex flex-col gap-[24px] items-center justify-center bg-[#9747ff] w-full p-[20px] md:p-[30px]">
-      <h2 className="text-[24px] text-[#ffff] font-[700] place-center-center text-center">
+    <div className="flex flex-col gap-[16px] md:gap-[24px] items-center justify-center bg-[#9747ff] w-full p-[20px] md:p-[30px]">
+      <h2 className="text-[18px] md:text-[24px] text-[#ffff] font-[700] place-center-center text-center">
         Our Values
       </h2>
       <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -56,22 +56,25 @@ function Header() {
         />
       </div>
       <div ref={linksRef} className={s.linkWrapper}>
-        <Link className={clsx({ [s.active]: pathName === "/" })} href="/">
+        <Link onClick={toggleMenu} className={clsx({ [s.active]: pathName === "/" })} href="/">
           Home
         </Link>
         <Link
+        onClick={toggleMenu}
           className={clsx({ [s.active]: pathName.includes("/About") })}
           href="/About"
         >
           About
         </Link>
         <Link
+        onClick={toggleMenu}
           className={clsx({ [s.active]: pathName.includes("/Blog") })}
           href="/Blog"
         >
           Blog
         </Link>
         <Link
+        onClick={toggleMenu}
           className={clsx({ [s.active]: pathName.includes("/Contact") })}
           href="/Contact"
         >

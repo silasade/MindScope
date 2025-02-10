@@ -23,12 +23,12 @@ function ResetPassword() {
   };
   return (
     <div className="flex flex-col justify-center w-100 gap-4 p-24 h-full">
-      <h1 className="text-center text-[36px] font-[700] text-[#10182f]">
+      <h1 className="text-center text-[18px] md:text-[36px] font-[700] text-[#10182f]">
         Change password
       </h1>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col gap-2">
-          <h5 className="text-[#333333] text-[16px] font-[500]">OldPassword</h5>
+          <h5 className="text-[#333333] text-[14px] md:text-[16px] font-[500]">OldPassword</h5>
           <Controller
             name="oldPassword"
             control={control}
@@ -48,7 +48,7 @@ function ResetPassword() {
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <h5 className="text-[#333333] text-[16px] font-[500]">
+          <h5 className="text-[#333333] text-[14px] md:text-[16px] font-[500]">
             New password
           </h5>
           <Controller
@@ -70,7 +70,7 @@ function ResetPassword() {
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <h5 className="text-[#333333] text-[16px] font-[500]">
+          <h5 className="text-[#333333] text-[14px] md:text-[16px] font-[500]">
             Confirm password
           </h5>
           <Controller
@@ -100,7 +100,7 @@ function ResetPassword() {
         <Button
           loading={isSubmitting}
           htmlType="submit"
-          className="h-[40px] h-[50px] bg-[#10182f] border-0 text-white text-[16px] font-[500] hover:bg-[#10182f] focus:bg-[#10182f]"
+          className="h-[40px] h-[50px] bg-[#10182f] border-0 text-white text-[14px] md:text-[16px] font-[500] hover:bg-[#10182f] focus:bg-[#10182f]"
         >
           Login
         </Button>

@@ -62,10 +62,10 @@ function HeroSection() {
       {/* Backdrop element with backdrop-filter applied */}
       <div className="w-[100%] h-full z-10 bg-black absolute bg-opacity-60 backdrop-brightness"></div>
       <div className="w-[100%] h-full absolute top-[10%] z-10  flex flex-col gap-2 items-center justify-center">
-        <h1 className="text-[48px] text-white text-center font-bold">
+        <h1 className="text-[20px] md:text-[36px] lg:text-[48px] text-white text-center font-bold">
           About us
         </h1>
-        <h3 className="text-[18px] text-white text-center font-semibold w-[75%]">
+        <h3 className="text-[15px] md:text-[18px] text-white text-center font-semibold w-[75%]">
           The ultimate management tool to help celebrate your members, engage
           with your community, and connect like never before.
         </h3>
