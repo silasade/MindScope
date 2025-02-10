@@ -21,7 +21,7 @@ function AboutMindScope() {
         y: 0,
         scrollTrigger: {
           trigger: content.current,
-          start: `top ${isMobile ? "30%" : "80%"}`,
+          start: `top ${isMobile ? "center" : "80%"}`,
           scrub: 0.5,
         },
       }
