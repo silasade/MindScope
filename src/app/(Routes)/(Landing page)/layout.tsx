@@ -10,7 +10,7 @@ export default async function LandingPagelayout({ children }: prop) {
   return (
     <div className={clsx(s.wrapper)}>
       <Header />
-      <div className="pt-[100px]">{children}</div>
+      <div className="pt-[30px] md:pt-[100px]">{children}</div>
       <Footer/>
     </div>
   );

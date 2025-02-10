@@ -13,11 +13,11 @@ function HeroSection() {
     <div ref={wrapper} className={s.wrapper}>
       <div className={s.heroContent}>
         <h1>
-          Unleash Your Potential: Insights <div> for the Mind.</div>
+          Unleash Your Potential: Insights for the Mind
         </h1>
         <h3>
           Dive into articles that unravel the mysteries of{" "}
-          <div> human thought and potential.</div>
+           human thought and potential.
         </h3>
         <button className="animate-bounce">Start Reading</button>
       </div>

@@ -6,17 +6,21 @@
   align-items: center;
   height: 500px;
   padding: 0 60px 20px 60px;
+  gap: 24px;
   @include mobile {
     flex-direction: column;
     padding: 30px;
     align-items: normal;
+    gap: 8px;
   }
   .heroContent {
     flex: auto;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 45%;
     @include mobile{
+      width: 100%;
       gap: 8px;
     }
     h1 {
