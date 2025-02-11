@@ -6,14 +6,15 @@ const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["400", "500", "700"], // Specify weights if needed
-  display: "swap"
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "MindScope",
   description: "Exploring Everything, One Post at a Time",
+  themeColor: "#3952f5",
 };
-
+export const Viewport = {};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,11 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-       className={`${roboto.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${roboto.variable} antialiased`}>{children}</body>
     </html>
   );
 }

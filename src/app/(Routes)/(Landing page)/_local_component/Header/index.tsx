@@ -45,15 +45,18 @@ function Header() {
 
   return (
     <div ref={wrapperRef} className={s.wrapper}>
-      <div className="relative w-[200px] h-[150px]">
+      <div className={s.logo}>
+
+      
+      <div className="relative items-start justify-self-start w-64 md:max-w-[200px] h-32 md:h-[150px]">
         <Image
           src={attachCloudinaryPrefix(
             "v1738942077/blueLogo-removebg-preview_jjfsoh.png"
           )}
           alt="blue logo"
           fill
-          className="object-contain"
         />
+        </div>
       </div>
       <div ref={linksRef} className={s.linkWrapper}>
         <Link onClick={toggleMenu} className={clsx({ [s.active]: pathName === "/" })} href="/">
