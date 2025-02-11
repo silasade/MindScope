@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   description: "Exploring Everything, One Post at a Time",
   themeColor: "#3952f5",
 };
-export const Viewport = {};
 export default function RootLayout({
   children,
 }: Readonly<{
