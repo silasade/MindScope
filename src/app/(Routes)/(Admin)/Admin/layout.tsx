@@ -14,7 +14,7 @@ function DashboardLayout({ children }: LayoutProps) {
       </aside>
       <main className="bg-[#EBEBEB] h-full flex flex-col gap-10">
         <Header />
-        <div className="p-4">{children}</div>
+        <div className="p-8 pt-1">{children}</div>
       </main>
     </div>
   );
