@@ -1,11 +1,6 @@
-import React from 'react'
+import { redirect } from "next/navigation";
+function Page() {
+  redirect("/Admin/post");
 
-function CreatePost() {
-  return (
-    <div>
-      
-    </div>
-  )
 }
-
-export default CreatePost
+export default Page;

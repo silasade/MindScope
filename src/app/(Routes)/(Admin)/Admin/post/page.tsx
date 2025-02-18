@@ -9,7 +9,7 @@ function Post() {
   return (
     <div className="flex flex-col gap-4">
       <Button
-        onClick={() => router.push("/Admin/post/(.)CreatePost")}
+        onClick={() => router.push("/Admin/post/CreatePost")}
         className="bg-[#10182f] text-white font-[500] text-[16px] w-32 self-end p-4"
       >
         Create blog
