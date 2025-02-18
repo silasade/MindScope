@@ -12,7 +12,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "MindScope",
   description: "Exploring Everything, One Post at a Time",
-  themeColor: "#ffff",
+};
+export const viewport = {
+  themeColor: "#ffffff", // Use a valid hex color (e.g., white)
 };
 export default function RootLayout({
   children,
