@@ -6,9 +6,7 @@ import attachCloudinaryPrefix from "@/app/Hooks/_Cloudinary";
 import {
   Account,
   Logout,
-  Overview,
   Post,
-  Team,
 } from "@/app/(Routes)/_global_components/Icons";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -19,9 +17,7 @@ type LinkType = {
 };
 
 const links: LinkType[] = [
-  { page: "Overview", href: "/Admin", icon: <Overview /> },
   { page: "Posts", href: "/Admin/post", icon: <Post /> },
-  { page: "Team", href: "/Admin/team", icon: <Team /> },
   { page: "Account", href: "/Admin/account", icon: <Account /> },
 ];
 

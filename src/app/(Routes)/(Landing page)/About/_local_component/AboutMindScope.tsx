@@ -26,7 +26,7 @@ function AboutMindScope() {
         },
       }
     );
-  }, []);
+  }, [isMobile]);
   return (
     <div className="flex flex-col md:flex-row justify-center w-[full] gap-[24px] h-auto md:h-[400px] items-center p-[20px] md:p-[60px]">
       <div

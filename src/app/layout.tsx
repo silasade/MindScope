@@ -10,8 +10,11 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "MindScope",
   description: "Exploring Everything, One Post at a Time",
+  title: {
+    template: "%s | MindScope",
+    default: "MindScope",
+  },
 };
 export const viewport = {
   themeColor: "#ffffff", // Use a valid hex color (e.g., white)
@@ -23,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="color-scheme" content="light" />
+      </head>
       <body className={`${roboto.variable} antialiased`}>{children}</body>
     </html>
   );

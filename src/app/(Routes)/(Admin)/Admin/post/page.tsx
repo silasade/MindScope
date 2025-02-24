@@ -6,8 +6,11 @@ import { useRouter } from "next/navigation";
 
 function Post() {
   const router = useRouter();
+
   return (
     <div className="flex flex-col gap-4">
+      <h2 className="text-[#9747ff] font-[700] text-[24px]">Welcome, Silas</h2>
+
       <Button
         onClick={() => router.push("/Admin/post/CreatePost")}
         className="bg-[#10182f] text-white font-[500] text-[16px] w-32 self-end p-4"

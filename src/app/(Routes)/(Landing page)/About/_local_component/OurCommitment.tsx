@@ -24,7 +24,7 @@ function OurCommitment() {
         },
       }
     );
-  }, []);
+  }, [isMobile]);
   return (
     <div className="flex md:flex-row flex-col-reverse justify-center w-[full] gap-[24px] h-auto md:h-[400px] items-center p-[20px] md:p-[60px]">
       <div className="relative w-[100%] md:w-[50%] h-[250px] md:h-[350px]">
