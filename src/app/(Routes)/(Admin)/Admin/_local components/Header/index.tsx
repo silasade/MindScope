@@ -8,12 +8,8 @@ import { usePathname } from "next/navigation";
 function Header() {
   const pathName = usePathname();
 
-  const pageTitles: Record<string, string> = {
-    "/Admin": "Overview",
-    "/Admin/post": "Post",
-    "/Admin/team": "Team",
-  };
-  const pageTitle = pageTitles[pathName] || "Account"; // Default to "Account" if no match
+
+  const pageTitle = pathName.includes("/Admin/post")?"Posts" : "Account"; // Default to "Account" if no match
 
   return (
     <div className="flex justify-between items-center border-b border-[#333333] w-[100%] p-4">
